@@ -1,0 +1,7 @@
+{
+  "name": "desafio-vesti-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
