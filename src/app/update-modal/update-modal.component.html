@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar {{nome}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="default" (click)="dismissModal()"><ion-icon name="close-circle"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input value="{{nome}}" type="text" name="nome" [(ngModel)]="customerData.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input value="{{email}}" type="text" nome="email" [(ngModel)]="customerData.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input value="{{telefone}}" type="number" name="telefone" [(ngModel)]="customerData.telefone"></ion-input>
+    </ion-item>
+    <ion-button  expand="block" (click)="updateData()" class="ion-margin-top">Salvar</ion-button>
+</ion-content>
+

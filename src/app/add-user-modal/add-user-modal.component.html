@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Novo Cliente</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="default" (click)="dismissModal()"
+        ><ion-icon name="close-circle"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input
+      [formControl]="input"
+      type="text"
+      name="nome"
+      [(ngModel)]="customerData.nome"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input
+      [formControl]="input"
+      type="text"
+      nome="email"
+      [(ngModel)]="customerData.email"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input
+      [formControl]="input"
+      type="number"
+      name="telefone"
+      [(ngModel)]="customerData.telefone"
+    ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Data de Nascimento</ion-label>
+    <ion-datetime
+      [formControl]="input"
+      displayFormat="YYYY-MM-DD"
+      name="dt_nascimento"
+      [(ngModel)]="customerData.dt_nascimento"
+    ></ion-datetime>
+  </ion-item>
+  <ion-button
+    [disabled]="input.invalid"
+    expand="block"
+    (click)="insertData()"
+    class="ion-margin-top"
+    >Adicionar</ion-button
+  >
+</ion-content>

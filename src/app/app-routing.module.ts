@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { CustomersComponent } from './components/customers/customers.component';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '', component:CustomersComponent, // O componente de Cliente será renderizado como home page
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
